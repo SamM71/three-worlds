@@ -47,12 +47,16 @@ function chooseLocation() {
 }
 
 function enterTheatre() {
-  const choice = prompt(`Who do you want to talk to first? : `)
+  const choice = prompt(`Who do you want to talk to? (1) Big Mac or (2) Barbie Queue? (Enter 3 to choose location, 4 to confront suspects): `)
 
   if (choice === `1`) {
     talkToBigMac()
   } else if (choice === `2`) {
     talkToBarbie()
+  } else if (choice === `3`) {
+    chooseLocation()
+  } else if (choice === `4`) {
+    chooseCulprit()
   }
 }
 
@@ -75,6 +79,7 @@ function talkToBigMac() {
       convoFinished = true
     }
   }
+  enterTheatre()
 }
 
 function talkToBarbie() {
@@ -96,15 +101,20 @@ function talkToBarbie() {
       convoFinished = true
     }
   }
+  enterTheatre()
 }
 
 function enterBusiness() {
-  const choice = prompt(`Who do you want to talk to first? : `)
+  const choice = prompt(`Who do you want to talk to? (1) Pepper King or (2) Angus Steakhouse? (Enter 3 to choose location, 4 to confront suspects): `)
 
   if (choice === `1`) {
     talkToPepper()
   } else if (choice === `2`) {
     talkToAngus()
+  } else if (choice === `3`) {
+    chooseLocation()
+  } else if (choice === `4`) {
+    chooseCulprit()
   }
 }
 
@@ -127,6 +137,7 @@ function talkToPepper() {
       convoFinished = true
     }
   }
+  enterBusiness()
 }
 
 function talkToAngus() {
@@ -148,6 +159,7 @@ function talkToAngus() {
       convoFinished = true
     }
   }
+  enterBusiness()
 }
 
 function chooseCulprit() {

@@ -34,6 +34,7 @@ function endGame() {
 }
 
 startGame()
+endGame()
 
 function enterWorld(choice) {
   const opening = `\nYou look down at your burger and notice that it looks nowhere near as good as it did on the sign.
