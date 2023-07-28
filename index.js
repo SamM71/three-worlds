@@ -1,6 +1,8 @@
 const prompt = require(`prompt-sync`)({sigint: true})
 const colours = require(`ansi-colors`)
 
+const avocadoBurger = require(`./world3`)
+
 
 
 const title = `\n \n ---You are playing THREE WORLDS by Nathan, Rubina, and Sam--- \n\n`
@@ -18,26 +20,41 @@ function startGame() {
   while (!isValidChoice) {
     const choice = prompt(`Which burger do you choose?: `)
 
-    if (choice === "a") {
+    if (choice === "1") {
       console.log(`You ask for the cheeseburger.`)
       break;
-    } else if (choice === "b") {
+    } else if (choice === "2") {
       console.log(`You ask for the chicken burger.`)
       const chickenBurger = require('./world2')
       chickenBurger()
       break;
-    } else if (choice === "c") {
+    } else if (choice === "3") {
       console.log(`You ask for the veggie option.`)
       break; 
     } else {
       console.log('Invalid input, please input only one of the three options above')
     }
   }
+  enterWorld(choice)
+}
+
+function endGame() {
+  console.log(`\nYou open your eyes and see the remnants of a delicious burger on your fingers. You've just had a burger that transported you to a different world.
+  "Another one please" you shout.
+  
+  ---THE END---`)
 }
 
 startGame()
 
+endGame()
 
+function enterWorld(choice) {
+  const opening = `\nYou look down at your burger and notice that it looks nowhere near as good as it did on the sign.
+  "Oh well" you say to yourself as you take a bite that changes your life.
+  You've never quite eaten anything like this, it's just so perfect.
+  You get completely lost in the burger, shutting your eyes to truly appreciate the taste....\n`
 
-
-
+  console.log(opening)
+  avocadoBurger(choice)
+}
