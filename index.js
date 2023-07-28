@@ -12,14 +12,23 @@ function startGame() {
   console.log(colours.green(title))
   console.log(openingText)
 
-  const choice = prompt(`Which do you choose?: `)
+  let isValidChoice = false; 
+  
+  while (!isValidChoice) {
+    const choice = prompt(`Which burger do you choose?: `)
 
-  if (choice == `1`) {
-    console.log(`You ask for the cheeseburger.`)
-  } else if (choice == `2`) {
-    console.log(`You ask for the chicken burger.`)
-  } else {
-    console.log(`You ask for the veggie option.`)
+    if (choice == `cheeseburger royale`) {
+      console.log(`You ask for the cheeseburger.`)
+      break;
+    } else if (choice == `champion chicken burger`) {
+      console.log(`You ask for the chicken burger.`)
+      break;
+    } else if (choice === 'amazing avo burger') {
+      console.log(`You ask for the veggie option.`)
+      break; 
+    } else {
+      console.log('invalid input, please input only one of the three options above')
+    }
   }
 }
 
