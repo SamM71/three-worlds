@@ -22,16 +22,22 @@ intro2 = colours.blue(dialogue[0].intro2),
 intro3 = colours.blue(dialogue[0].intro3),
 intro4 = colours.blue(dialogue[0].intro4),
 intro5 = colours.blue(dialogue[0].intro5),
-speech = colours.cyan(dialogue[2].character) + colours.white(dialogue[1].speech),
+speech = colours.cyan(dialogue[2].characterH) + colours.white(dialogue[1].speech),
 options = colours.yellow(dialogue[3].options),
-co1 = colours.cyan(dialogue[2].character) + colours.white(dialogue[1].speech1),
-co2 = colours.cyan(dialogue[2].character) + colours.white(dialogue[1].speech2),
-co3 = colours.cyan(dialogue[2].character) + colours.white(dialogue[1].speech3),
+options2 = colours.yellow(dialogue[3].options2),
+co1 = colours.cyan(dialogue[2].characterR) + colours.white(dialogue[1].speech1),
+co2 = colours.cyan(dialogue[2].characterH) + colours.white(dialogue[1].speech2),
+co3 = colours.cyan(dialogue[2].characterH) + colours.white(dialogue[1].speech3),
 expo1 = colours.blue(dialogue[0].expo1),
 expo2 = colours.blue(dialogue[0].expo2),
-expo3 = colours.blue(dialogue[0].expo3)
+expo3 = colours.blue(dialogue[0].expo3),
+expo4r = colours.blue(dialogue[0].expo4) + colours.cyan(dialogue[2].charreveal) + colours.blue(" beside you"),
+expo4h = colours.blue(dialogue[0].expo4) + colours.cyan(dialogue[2].charhidden) + colours.blue(" beside you"),
+expo5 = colours.blue(dialogue[0].expo5)
+
 let choice = "",
-phase = 0;
+phase = 0,
+reveal = false;
 
 
 function cheeseBurger() {
@@ -47,20 +53,29 @@ function cheeseBurger() {
     if(phase === 1) {
         switch (choice) {
             case "1":
+                reveal = true;
                 console.log(co1);
                 delay(expo1, 4000);
+                delay(expo4r, 8000);
                 break;
             case "2":
                 console.log(co2);
                 delay(expo2, 4000);
+                delay(expo4h, 8000);
                 break;
             case "3":
                 console.log(co3);
                 delay(expo3, 4000);
+                delay(expo4h, 8000);
                 break;
             default: 
                 console.log("invalid input");
         }
+    }
+    if(phase === 2) {
+        console.log(expo5);
+        console.log(options2);
+        choice = prompt("Choose: ");
     }
 }
 

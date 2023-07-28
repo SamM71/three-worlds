@@ -7,7 +7,9 @@
         "intro5": "\nYou rise to your feet and brush some of the rubbish off you, you head out of the alleyway and a strange man approaches you, his eyes almost lifeless",
         "expo1": "An android? You're surprised such a thing exists and so Human-like in it's appearance.\nYou explain to the android where you're from as you venture out onto the streets.",
         "expo2": "Umbra? You've never heard of such a city... wait... did he just say 'humans' and 'androids'?\nYou ask the stranger to elaborate, and he does. You walk out onto the streets as you listen to him.",
-        "expo3": "You regale the stranger with your extraordinary story of the burger as you walk onto the streets,\nhe looks unimpressed, which is natural for someone who didn't have such an awesome burger."
+        "expo3": "You regale the stranger with your extraordinary story of the burger as you walk onto the streets,\nhe looks unimpressed, which is natural for someone who didn't have such an awesome burger.",
+        "expo4": "\nThe city lights permeate through the thick smog that lingers, it's almost impossible for you to breathe down here.\nYou notice people walking through the streets, but there's something off about them.\nThey almost look lifeless, like the ",
+        "expo5": "\nWhile walking you notice someone glancing at you from a darkend window, they seem... curious about your presence."
     },
     {
         "speech": "Hello there. I see another one has come to our world. What brings you here?",
@@ -16,9 +18,13 @@
         "speech3": "What is this 'burger' you speak of?"
     },
     {
-        "character": "\nStranger: "
+        "characterH": "\nStranger: ",
+        "characterR": "\nAndroid: ",
+        "charhidden": "Stranger",
+        "charreveal": "Android"
     },
     {
-        "options": "\n1. Who are you? / 2. What is this place? / 3. I just had a really good burger."
+        "options": "\n1. Who are you? / 2. What is this place? / 3. I just had a really good burger.",
+        "options2": "\n1. Go and explore. / 2. Continue to walk with the android."
     }
 ]
