@@ -218,7 +218,7 @@ function chickenBurger () {
     }
   }
   
-chickenBurger()
+//chickenBurger()
 
 
 
