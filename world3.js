@@ -168,15 +168,15 @@ function chooseCulprit() {
   const choice = prompt(`Please enter: `)
 
   if (choice === `1`) {
-    console.log(`"Big Mac did it! You say."`)
+    console.log(`"Big Mac did it!" You say.`)
   } else if (choice === `2`) {
-    console.log(`"Barbie did it! You say."`)
+    console.log(`"Barbie did it!" You say.`)
   } else if (choice === `3`) {
-    console.log(`"Pepper did it! You say."`)
+    console.log(`"Pepper did it!" You say.`)
   } else if (choice === `4`) {
-    console.log(`"Angus did it! You say."`)
+    console.log(`"Angus did it!" You say.`)
   } else if (choice === `5`) {
-    console.log(`"Mr. Royale did it! You say."`)
+    console.log(`"Mr. Royale did it!" You say.`)
   }
 
   console.log(`You offer up no explanation and the correctly-guessed culprit comes clean. The case of the smashed avocado has been solved.`)
