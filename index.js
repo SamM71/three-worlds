@@ -26,6 +26,13 @@ function startGame() {
   enterWorld(choice)
 }
 
+function endGame() {
+  console.log(`\nYou open your eyes and see the remnants of a delicious burger on your fingers. You've just had a burger that transported you to a different world.
+  "Another one please" you shout.
+  
+  ---THE END---`)
+}
+
 startGame()
 
 function enterWorld(choice) {

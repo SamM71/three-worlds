@@ -24,6 +24,12 @@ const questions = `(1) How do you know Mr. Royale?
 (4) Do you know of anyone who might have done this?
 (5) End conversation.`
 
+const suspects = `(1) Big Mac
+(2) Barbie Queue
+(3) Pepper King
+(4) Angus Steakhouse
+(5) Mr. Royale`
+
 function avocadoBurger() {
   console.log(openingText);
   chooseLocation();
@@ -55,7 +61,7 @@ function talkToBigMac() {
   while (!convoFinished) {
     console.log(`\nWhat do you want to ask?`)
     console.log(questions)
-    let choice = prompt(`Please enter: `)
+    const choice = prompt(`Please enter: `)
 
     if (choice === `1`) {
       console.log(`"He is the director of every performance at this theatre, he owns the place. Usually I do the lighting, but for some reason he gave me the leading role for what we're currently showing - Hamlet."`)
@@ -64,7 +70,7 @@ function talkToBigMac() {
     } else if (choice === `3`) {
       console.log(`"I've been rehearsing with Barbie."`)
     } else if (choice === `4`) {
-      talkToBarbie(`"Where do I start? Most people have a reason to hate him, but the timing of it could be important. You should definitely question his business partner, Pepper King. They used to be quite close and she used to come to every performance but she's stopped recently."`)
+      console.log(`"Where do I start? Most people have a reason to hate him, but the timing of it could be important. You should definitely question his business partner, Pepper King. They used to be quite close and she used to come to every performance but she's stopped recently."`)
     } else if (choice === `5`) {
       convoFinished = true
     }
@@ -74,9 +80,94 @@ function talkToBigMac() {
 function talkToBarbie() {
   let convoFinished = false;
   while (!convoFinished) {
-    console.log(`What do you want to ask?`)
-    const choice = prompt(questions)
+    console.log(`\nWhat do you want to ask?`)
+    console.log(questions)
+    const choice = prompt(`Please enter: `)
+
+    if (choice === `1`) {
+      console.log(`"Well, he is the director and I am always the leading lady! He's a pretty awful director but at least I get some exposure out of it."`)
+    } else if (choice === `2`) {
+      console.log(`"I was performing in the play of course!."`)
+    } else if (choice === `3`) {
+      console.log(`"I was rehearsing with Big Mac."`)
+    } else if (choice === `4`) {
+      console.log(`"That's a tough one! Honestly, he's desperate for attention so he may have done it himself!"`)
+    } else if (choice === `5`) {
+      convoFinished = true
+    }
   }
+}
+
+function enterBusiness() {
+  const choice = prompt(`Who do you want to talk to first? : `)
+
+  if (choice === `1`) {
+    talkToPepper()
+  } else if (choice === `2`) {
+    talkToAngus()
+  }
+}
+
+function talkToPepper() {
+  let convoFinished = false;
+  while (!convoFinished) {
+    console.log(`\nWhat do you want to ask?`)
+    console.log(questions)
+    const choice = prompt(`Please enter: `)
+
+    if (choice === `1`) {
+      console.log(`"I've known him for years, we run a business together."`)
+    } else if (choice === `2`) {
+      console.log(`"This is strictly confidential, but I was at home planning the setup of a new business as this one is no longer profitable. Please don't tell Mr. Royale."`)
+    } else if (choice === `3`) {
+      console.log(`"I went for lunch with a friend,"`)
+    } else if (choice === `4`) {
+      console.log(`"Look no further than our own Angus Steakhouse. He has spent the last few weeks sulking over losing his place as Royale's leading man. He's also a terrible employee that gets no work done."`)
+    } else if (choice === `5`) {
+      convoFinished = true
+    }
+  }
+}
+
+function talkToAngus() {
+  let convoFinished = false;
+  while (!convoFinished) {
+    console.log(`\nWhat do you want to ask?`)
+    console.log(questions)
+    const choice = prompt(`Please enter: `)
+
+    if (choice === `1`) {
+      console.log(`"He is my boss and WAS my director."`)
+    } else if (choice === `2`) {
+      console.log(`"I was at home, filming an audition tape to send out to the Burger Broadcasting Company."`)
+    } else if (choice === `3`) {
+      console.log(`"I was here, at work."`)
+    } else if (choice === `4`) {
+      console.log(`"That fraud, Maclean. I bet he got the taste of the limelight and had to find a way to stay in it."`)
+    } else if (choice === `5`) {
+      convoFinished = true
+    }
+  }
+}
+
+function chooseCulprit() {
+  console.log(`\nThe suspects are stood in front of you.`)
+  console.log(suspects)
+  const choice = prompt(`Please enter: `)
+
+  if (choice === `1`) {
+    console.log(`"Big Mac did it! You say."`)
+  } else if (choice === `2`) {
+    console.log(`"Barbie did it! You say."`)
+  } else if (choice === `3`) {
+    console.log(`"Pepper did it! You say."`)
+  } else if (choice === `4`) {
+    console.log(`"Angus did it! You say."`)
+  } else if (choice === `5`) {
+    console.log(`"Mr. Royale did it! You say."`)
+  }
+
+  console.log(`You offer up no explanation and the correctly-guessed culprit comes clean. The case of the smashed avocado has been solved.`)
 }
 
 module.exports = avocadoBurger;
