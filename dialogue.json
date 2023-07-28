@@ -1,5 +1,24 @@
 [
     {
-        "text": "You awaken in a dark alley, laying on your back, your senses thrown into disarray; as your head stops spinning and your heart-rate calms you notice a foul stench creeping up your nose followed by a sudden sharp pain piercing your back. You feel around and notice you've fallen into a pile of rubbish.\n...\nYou could have sworn you were just eating a burger...\n...just what exactly is this place?"
+        "intro": "You then awaken in a dark alley, laying on your back, your senses thrown into disarray; \nas your head stops spinning and your heart-rate calms you notice a foul stench creeping up your nose \nfollowed by a sudden sharp pain piercing your back. You feel around and notice you've fallen into a pile of rubbish.",
+        "intro2": "\n...",
+        "intro3": "\nYou could have sworn you were just eating a burger...",
+        "intro4": "\n...just what exactly is this place?",
+        "intro5": "\nYou rise to your feet and brush some of the rubbish off you, you head out of the alleyway and a strange man approaches you, his eyes almost lifeless",
+        "expo1": "An android? You're surprised such a thing exists and so Human-like in it's appearance.\nYou explain to the android where you're from as you venture out onto the streets.",
+        "expo2": "Umbra? You've never heard of such a city... wait... did he just say 'humans' and 'androids'?\nYou ask the stranger to elaborate, and he does. You walk out onto the streets as you listen to him.",
+        "expo3": "You regale the stranger with your extraordinary story of the burger as you walk onto the streets,\nhe looks unimpressed, which is natural for someone who didn't have such an awesome burger."
+    },
+    {
+        "speech": "Hello there. I see another one has come to our world. What brings you here?",
+        "speech1": "I'm an android. It's my job to clean the streets. Who are you?",
+        "speech2": "This place is the city of Umbra, home to both Humans and android alike.",
+        "speech3": "What is this 'burger' you speak of?"
+    },
+    {
+        "character": "\nStranger: "
+    },
+    {
+        "options": "\n1. Who are you? / 2. What is this place? / 3. I just had a really good burger."
     }
 ]
